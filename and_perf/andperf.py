@@ -302,10 +302,7 @@ class AndPerf:
         plt.ylabel("Fps")
         series.plot.line(grid=True)
         plt.show()
-        
 
-class GfxFps:
-    pass
 
 class _Frame(NamedTuple):
     cost: int
@@ -389,8 +386,13 @@ class StatThread:
 
     def dump_process(self) -> ProcessInfo:
         start = time.time()
-        pid = _sh(
-            f"adb shell ps -ef 2>/dev/null | grep {self.proc_name} | head -1 | awk '{{print $2}}'").strip()
+        data = _sh(f"adb shell ps -ef 2>/dev/null").strip()
+        
+        for line in data.splitlines():
+            segs = line.strip().split()
+            if segs[-1] == self.proc_name:
+                pid = segs[1]
+
         if not pid:
             raise SystemExit(f'process: {self.proc_name} is not runing')
 
@@ -495,7 +497,9 @@ class StatThread:
         after_process_info = self.dump_process()
         self._diff(before_process_info, after_process_info)
 
-
-if __name__ == '__main__':
+def main():
     import fire
     fire.Fire(AndPerf)
+
+if __name__ == '__main__':
+    main()
