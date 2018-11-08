@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="andperf",
-    version="0.0.1-alpha4",
+    version="0.0.1-beta1",
     author="WangWei",
     author_email="2317073226@qq.com",
     description="Android 性能调优工具",

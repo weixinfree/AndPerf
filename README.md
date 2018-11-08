@@ -1,25 +1,33 @@
 # AndPerf
+
 Android 上的一些性能调优工具
+
 
 ## 安装
 ```bash
 pip3 install andperf
 ```
 
-## 运行截图
-![dev_screen.png](images/dev_screen.png)
-![fps.png](images/fps.png)
-![gfx_historgram.png](images/gfx_historgram.png)
-![meminfo_pie.png](images/meminfo_pie.png)
-![meminfo_trend.png](images/meminfo_trend.png)
-![stat_t.png](images/stat_t.png)
-![top_activity.png](images/top_activity.png)
+## 使用
+#### `andperf dev-screen`
+![dev_screen.png](https://raw.githubusercontent.com/weixinfree/AndPerf/master/images/dev_screen.png)
+#### `andperf stat-thread`
+![stat_t.png](https://raw.githubusercontent.com/weixinfree/AndPerf/master/images/stat_t.png)
+#### `andperf top-activity`
+![top_activity.png](https://raw.githubusercontent.com/weixinfree/AndPerf/master/images/top_activity.png)
+#### `andperf fps`
+![fps.png](https://raw.githubusercontent.com/weixinfree/AndPerf/master/images/fps.png)
+#### `andperf gfx-hist`
+![gfx_historgram.png](https://raw.githubusercontent.com/weixinfree/AndPerf/master/images/gfx_historgram.png)
+#### `andperf meminfo-pie`
+![meminfo_pie.png](https://raw.githubusercontent.com/weixinfree/AndPerf/master/images/meminfo_pie.png)
+#### `andperf meminfo-trend`
+![meminfo_trend.png](https://raw.githubusercontent.com/weixinfree/AndPerf/master/images/meminfo_trend.png)
 
-
-## 命令列表
+## 完整命令列表
 
 ```bash
-andperf config  设置用户自定义配置，例如 andperf config --app={your app name} 就不用每次都要输入app package name
+andperf config  设置用户自定义配置
 andperf cpuinfo 查看
 andperf dev-mem 查看设备内存信息
 andperf dev-screen 查看设备屏幕信息
@@ -38,3 +46,13 @@ andperf systrace 调用Android systrace 命令，并在chrome中打开
 andperf top-activity 查看当前栈顶Activity
 andperf top-app 查看当前栈顶App
 ```
+
+## config
+config 指定app package name，可以在执行其它指令时节省很多输入
+
+```bash
+andperf config --app=com.meelive.ingkee
+```
+
+## LICENSE
+[MIT](https://github.com/weixinfree/AndPerf/blob/master/LICENSE)
