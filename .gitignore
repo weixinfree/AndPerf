@@ -2,3 +2,5 @@
 build/
 dist/
 andperf.egg-info/
+.vscode/
+and_perf/__pycache__/*
