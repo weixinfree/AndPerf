@@ -1,10 +1,10 @@
 import os
 
-from _config import AndPerfConfig
-from _util import open_with_webbrowser, sh
-from gfxinfo import Gfxinfo
-from meminfo import Meminfo
-from stat_thread import StatThread
+from andperf._config import AndPerfConfig
+from andperf._util import open_with_webbrowser, sh
+from andperf.gfxinfo import Gfxinfo
+from andperf.meminfo import Meminfo
+from andperf.stat_thread import StatThread
 
 
 class AndPerf:
@@ -104,7 +104,7 @@ class AndPerf:
         """
         计算fps, 并绘制fps变化走势图
         """
-        Gfxinfo.fps(self._get_app(app), interval, plot)
+        Gfxinfo.trend(self._get_app(app), interval, plot)
 
     ################################
     # Helper
