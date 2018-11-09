@@ -4,7 +4,7 @@ from functools import partial
 from operator import attrgetter, itemgetter
 from typing import List, NamedTuple, Optional
 
-from _util import sh
+from andperf._util import sh
 
 
 class TaskInfo(NamedTuple):

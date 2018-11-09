@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from _util import sh
+from andperf._util import sh
 
 
 class _Frame(NamedTuple):

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="andperf",
-    version="0.0.1-beta2",
+    version="0.0.2-beta1",
     author="WangWei",
     author_email="2317073226@qq.com",
     description="Android 性能调优工具",
@@ -19,7 +19,7 @@ setuptools.setup(
         'pandas==0.23.4'],
     entry_points={
         'console_scripts': [
-            'andperf=and_perf.andperf:main'
+            'andperf=andperf.andperf:main'
         ]
     },
     classifiers=[

@@ -5,7 +5,7 @@ from pprint import pprint
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from _util import sh
+from andperf._util import sh
 
 
 class Meminfo:
