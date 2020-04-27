@@ -54,7 +54,8 @@ class Meminfo:
 
     @staticmethod
     def dump(app: str):
-        return Meminfo(sh(f'adb shell dumpsys meminfo {app}'))
+        pid = sh(f"adb shell ps -ef | grep -E '{app}$' | awk '{{print $2}}'")
+        return Meminfo(sh(f'adb shell dumpsys meminfo {pid}'))
 
     def pie(self):
         data = vars(self)

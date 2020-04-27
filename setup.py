@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="andperf",
-    version="0.0.2-beta1",
+    version="0.0.3",
     author="WangWei",
     author_email="2317073226@qq.com",
     description="Android 性能调优工具",
@@ -16,7 +16,8 @@ setuptools.setup(
     install_requires=[
         'matplotlib==3.0.0',
         'numpy==1.15.1',
-        'pandas==0.23.4'],
+        'pandas==0.23.4',
+        'fire==0.1.3'],
     entry_points={
         'console_scripts': [
             'andperf=andperf.andperf:main'
