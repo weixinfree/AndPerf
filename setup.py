@@ -15,7 +15,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     install_requires=[
         'matplotlib==3.0.0',
-        'numpy==1.15.1',
+        'numpy==1.22.0',
         'pandas==0.23.4',
         'fire==0.1.3'],
     entry_points={
